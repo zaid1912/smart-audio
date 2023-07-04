@@ -1,0 +1,35 @@
+footer{
+    background-color: #404258;
+    
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.rightsText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    color: #F4EEE0;
+    opacity: 0.5;
+}
+.icon{
+    font-size: 1.6rem;
+    color: #F4EEE0;
+}
+@media screen and (max-width: 600px){
+    
+    footer{
+        height: 3rem;
+    }
+    .rightsText{
+        font-size: 0.8rem;
+    }
+    .icon{
+        font-size: 1rem;
+    }
+
+}

@@ -1,0 +1,24 @@
+header{
+    background-color: #474E68;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+}
+h1{
+    padding-left: 2rem;
+    color: #DAFFFB;
+    font-size: 2.5rem;
+}
+
+span{
+    font-style: italic;
+    color: #F4EEE0;
+}
+@media screen and (max-width: 600px){
+    
+    h1{
+        font-size: 2rem;
+    }
+
+}
