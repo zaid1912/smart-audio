@@ -1,9 +1,10 @@
 header{
     background-color: #474E68;
-    width: 100vw;
-    overflow-x: hidden;
+    /* width: 100vw; */
+    /* overflow: hidden; */
     display: flex;
     align-items: center;
+    height: 5rem;
 }
 h1{
     padding-left: 2rem;

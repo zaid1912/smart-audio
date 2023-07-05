@@ -2,9 +2,10 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const { Configuration, OpenAIApi } = require("openai");
+require('dotenv').config(); // Load environment variables from .env file
 
 const config = new Configuration({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY, // Access the API key from the environment variable
 });
 
 const openai = new OpenAIApi(config);
