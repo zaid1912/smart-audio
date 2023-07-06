@@ -20,7 +20,8 @@ function Body() {
   const [response, setResponse] = useState("");
   const [isSpeaking, setIsSpeaking] = useState(false);
 
-  const HTTP = "http://localhost:8020/chat";
+  // const HTTP = "http://localhost:8020/chat";
+  const HTTP = "https://scintillating-piroshki-458886.netlify.app/chat"
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
