@@ -4,7 +4,7 @@ import "./body.css";
 import { BsFillMicFill } from "react-icons/bs";
 import { BsFillMicMuteFill } from "react-icons/bs";
 import { MdRestartAlt } from "react-icons/md";
-import {RiSpeakFill} from 'react-icons/ri';
+import { RiSpeakFill } from "react-icons/ri";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
@@ -21,11 +21,13 @@ function Body() {
   const [isSpeaking, setIsSpeaking] = useState(false);
 
   // const HTTP = "http://localhost:8020/chat";
-  const HTTP = "https://scintillating-piroshki-458886.netlify.app/chat"
+  const HTTP = "/chat";
+
+  //replace .post(`${HTTP}`, { transcript }) with .post("/chat", { transcript }) in axios.post for heroku deployment
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${HTTP}`, { transcript })
+      .post("/chat", { transcript })
       .then((res) => setResponse(res.data))
       .catch((error) => {
         console.log(error);
@@ -90,7 +92,12 @@ function Body() {
           >
             End Recording <BsFillMicMuteFill />
           </button>
-          <button className="record-btn" id="reset" reset-btn onClick={resetTranscript}>
+          <button
+            className="record-btn"
+            id="reset"
+            reset-btn
+            onClick={resetTranscript}
+          >
             Reset <MdRestartAlt />
           </button>
         </div>
@@ -99,7 +106,11 @@ function Body() {
           <p>{response ? response : "Response . . ."}</p>
         </div>
 
-        <button className="record-btn" onClick={handleSpeak} disabled={!transcript || isSpeaking}>
+        <button
+          className="record-btn"
+          onClick={handleSpeak}
+          disabled={!transcript || isSpeaking}
+        >
           Response Audio <RiSpeakFill />
         </button>
       </div>

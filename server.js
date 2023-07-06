@@ -14,21 +14,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// app.post("/chat", async (req, res) => {
-//   const { transcript } = req.body;
-
-//   const completion = await openai.createCompletion({
-//     model: "text-davinci-003",
-//     max_tokens: 512,
-//     temperature: 0,
-//     prompt: transcript,
-//   });
-
-//   res.send(completion.data.choices[0].text);
-// });
-
-
-app.post("/.netlify/functions/server/chat", async (req, res) => {
+app.post("/chat", async (req, res) => {
   const { transcript } = req.body;
 
   const completion = await openai.createCompletion({
@@ -44,6 +30,7 @@ app.post("/.netlify/functions/server/chat", async (req, res) => {
 
 
 // const port = 8020;
-// app.listen(port, () => console.log(`server is running on port: ${port}`));
+const port = process.env.PORT || 8020;
+app.listen(port, () => console.log(`server is running on port: ${port}`));
 
-app.listen(process.env.PORT || 8020, () => console.log(`Server is running`));
+// app.listen(process.env.PORT || 8020, () => console.log(`Server is running`));
