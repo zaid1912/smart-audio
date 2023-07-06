@@ -14,8 +14,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use(express.static('build')); // Serve static files from the build folder
+
 app.get("/", (req, res) => {
-  res.send("Hello from your Express server!");
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 
