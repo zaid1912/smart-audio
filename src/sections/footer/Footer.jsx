@@ -7,7 +7,7 @@ function Footer() {
     <footer>
       <div className="rightsText">
         <AiOutlineCopyrightCircle className="icon" />
-        <p>2023 Zaid Muzammil. All rights reserved</p>
+        <p>2023 VocalAI by Zaid Muzammil. All rights reserved</p>
       </div>
     </footer>
   );
