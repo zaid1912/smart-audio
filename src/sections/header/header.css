@@ -1,10 +1,12 @@
 header{
     background-color: #474E68;
-    /* width: 100vw; */
-    /* overflow: hidden; */
+    width: 100vw;
+    overflow: hidden;
     display: flex;
     align-items: center;
+    position:fixed;
     height: 5rem;
+    opacity: 0.8;
 }
 h1{
     padding-left: 2rem;
@@ -20,6 +22,9 @@ span{
     
     h1{
         font-size: 2rem;
+    }
+    header{
+        height: 3.5rem;
     }
 
 }
