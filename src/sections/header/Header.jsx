@@ -1,12 +1,15 @@
 import React from "react";
 import "./header.css";
- 
+import mainlogo from "./mainlogo.png";
 
-function Header(){
-    return(
+function Header() {
+  return (
     <header>
-        <h1 className="smart">Vocal<span className="audio">AI</span></h1>
+      <img src={mainlogo} alt="logo" />
+      <h1 className="smart">
+        Vocal<span className="audio">AI</span>
+      </h1>
     </header>
-    ) 
+  );
 }
 export default Header;
