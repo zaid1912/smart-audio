@@ -20,14 +20,15 @@ function Body() {
   const [response, setResponse] = useState("");
   const [isSpeaking, setIsSpeaking] = useState(false);
 
-  // const HTTP = "http://localhost:8020/chat";
-  const HTTP = "/chat";
+  const HTTP = "http://localhost:8020/chat";
+  // const HTTP = "/chat";
 
   //replace .post(`${HTTP}`, { transcript }) with .post("/chat", { transcript }) in axios.post for heroku deployment
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("/chat", { transcript })
+      // .post("/chat", { transcript })          for heroku deployment
+      .post(`${HTTP}`, {transcript})
       .then((res) => setResponse(res.data))
       .catch((error) => {
         console.log(error);

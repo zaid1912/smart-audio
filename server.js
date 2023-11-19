@@ -13,6 +13,7 @@ const openai = new OpenAIApi(config);
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+// const path = require('path');
 
 app.use(express.static('build')); // Serve static files from the build folder
 
